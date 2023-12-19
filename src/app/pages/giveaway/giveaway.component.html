@@ -1,0 +1,21 @@
+<div class="grid">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="fs-4">Revela, oculta y pasa!</p>
+            <p class="fs-6">Te toco: <span *ngIf="!hidden" class="badge bg-danger">{{current}}</span><span
+                    *ngIf="hidden" class="badge bg-danger">*****************</span></p>
+        </div>
+        <div class="d-grid gap-2 col-sm-12 col-md-3">
+            <button class="btn btn-primary mt-3" (click)="toggleShow()">{{buttonText}}</button>
+        </div>
+        <div class="d-grid gap-2 col-sm-12 col-md-3">
+            <button class="btn btn-success mt-3" (click)="refreshCurrent()" [disabled]="remainingItems <= 1">Soy yo</button>
+        </div>
+        <div class="d-grid gap-2 col-sm-12 col-md-3">
+            <button class="btn btn-success mt-3" (click)="returnToHome()">Nuevo Sorteo</button>
+        </div>
+        <div class="d-grid gap-2 col-sm-12 col-md-3">
+            <button class="btn btn-success mt-3" (click)="nextParticipant()" [disabled]="remainingItems <= 1">Siguiente</button>
+        </div>
+    </div>
+</div>
